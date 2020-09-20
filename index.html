@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="estilosmicrosite.css">
+<head>
+        <meta charset="UTF-8">
+        <title>Round Earth</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body id="body">
+ <img alt="espacio" id="espacio" src="imag/astronaut%20copy.jpg">
+  
+  <img alt="astronauta" id="astronauta"src="imag/Background%20copy.png">
+  
+<header>
+   <div class="logo">
+    <p id="logo">Round Earth</p>
+        <p style="margin-top: 30px">Facts</p>
+   </div>
+
+</header>
+
+   <main>
+
+<img alt="luna" id="luna" src="imag/Layer%204.png">
+
+        <section>
+            <p id="titulo">Know better your planet. </p>
+            <img  alt="flecha" class="pulse" src="imag/flecha.png">
+        </section>
+        <section>
+            <p class="textos">1. The origin of the word «Earth»
+            All other planets in our solar system are named after Greek and Roman gods, except our planet. The English word «Earth» comes from the Anglo-Saxon word «Erda», which means “land” or “soil”. Ironically, 71% of the Earth is covered by water and is the only known planet that has this ‘precious’ matter in liquid form.</p>
+        </section>
+        <section>
+            <p class="textos">2. The day does not have 24 hours!
+            People often claim that the hours of the day are not enough and they are right! They are not 24. The actual time of Earth’s rotation around its axis, or stellar day, is 23 hours 56 minutes and 4 seconds. The solar day, or the time required for the sun to return to the same point on the meridian, varies 16 minutes throughout the year.</p>
+        </section>
+        <section>
+            <p class="textos">3. The Earth is not round!
+            Although the Earth has a spherical shape, because of the gravitational forces, it is not perfectly round. In fact, the radius of the equator of the Earth is 3.963.34 miles, while the polar one is 3.949.99 miles.</p>
+        </section>
+        <section>
+            <p class="textos">4. The Earth used to have a twin planet called “Theia”
+            There is a theory which states that once we were not alone in orbit around the Sun. The Earth used to have a “twin” planet of the Mars’s size called “Theia” till one day the planet crashed to Earth. The major part of this planet was absorbed, while a big part of it, combined with materials of the Earth, formed the moon. The proof for this theory is the fact that the Moon is unusually large to be a satellite for a planet of the Earth’s size and has metal isotopes similar to those of Earth.</p>
+        </section>
+        <section>
+            <p class="textos">5. The mystery of the Moon
+            There are many things we do not know for sure about the Moon. For example, its center is 6,000 feet closer to the Earth, which hypothetically should have caused a path of greater instability, but the orbit of the moon is almost perfectly circular.
+
+            Despite the popular belief, there is no “dark side” of the moon, since the gravitational force of the Earth makes the Moon slow down and rotate only once during a month (so-called “synchronous rotation”), that is why it is possible to see only one side of the moon from the Earth.
+
+            Moreover, a really unbelievable coincidence is that the Sun is 400 times farther from Earth and 400 times larger than the Moon, that is why it seems to have the same size with the Moon in the sky.</p>
+        </section>
+        <section>
+            <p class="textos">6. Earth is the only planet with plate tectonics
+            Earth consists of 7 large plates which move in different directions at a speed up to 4 inches per year. According to the theory, when they collide one with another, mountains are formed. When they move apart, valleys are formed. Also, if we consider the negative side of this, these plates and their collisions are the cause of earthquakes and volcanic eruptions. On the other hand, this activity allows the carbon, which is vital to our existence, to be recycled and refilled, allowing life to continue as we know it.</p>
+        </section>
+        <section>
+            <p class="textos">7. The highest point on Earth is not the Everest
+            It is true that being 8,848 meters above sea level, this famous mountain is believed to be the highest top in the world. However, since that the Earth is not perfectly round, any object along the equator is a bit closer to the sky. Thus, although the Mount Chimborazo in Ecuador is only 6,268 meters above sea level but is located in such a zone, technically it is farther from the center of the Earth and much taller than Everest!.</p>
+        </section>
+        <section>
+            <p class="textos">8. Over 90% of the ocean remains unexplored
+            You may know a lot about other planets in our solar system, but the truth is we recently started to explore the vast oceans of our planet. In fact, more than 90% of the vast, deep blue seas remain unexplored. 212,906 marine species are identified till now, while there are probably 25 million more that we know nothing about.</p>
+        </section>
+
+    </main>
+
+</body>
+
+<script>
+    $(document).ready(function(){
+        $('.pulse').on('click',function(){
+            var y = $(window).scrollTop();
+            $("html, body").animate({ scrollTop: y + 422 }, 800);
+        });
+        $('.logo').on('click',function(){
+            $("html, body").animate({ scrollTop: 0 }, 800);
+        });
+        $(window).scroll(function() {
+            var currY = $(this).scrollTop();
+            var postHeight = $(this).height();
+            var scrollPercent = (currY / postHeight) * 100;
+            $('#luna').css("right", scrollPercent/100+'%');
+            $('#espacio').css("bottom", (scrollPercent/300)-10+'%');
+            $('#luna').css("top", (scrollPercent/45)+30+'%');
+        });
+        
+    });
+</script>
+</html>
